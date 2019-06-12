@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <appender name="DataExpunge" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logs}/data-expunge.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${scalar.logs}/data-expunge.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <maxHistory>2</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{1} %m%n%rEx </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.codingkapoor.dataexpunge" level="DEBUG" additivity="false">
+        <appender-ref ref="DataExpunge"/>
+    </logger>
+
+</configuration>
