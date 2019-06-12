@@ -8,11 +8,11 @@ import com.codingkapoor.dataexpunge.core.`package`.Ttl
 import com.codingkapoor.dataexpunge.{Do, Done}
 import com.codingkapoor.dataexpunge._
 
-object CassPartitionExpunge {
-  def props: Props = Props[CassPartitionExpunge]
+object CassExpunge {
+  def props: Props = Props[CassExpunge]
 }
 
-class CassPartitionExpunge extends Actor with Logger {
+class CassExpunge extends Actor with Logger {
 
   logger.info(s"Created ${this.self.path.name}.")
 

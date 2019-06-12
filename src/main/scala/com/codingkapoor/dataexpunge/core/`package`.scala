@@ -2,9 +2,9 @@ package com.codingkapoor.dataexpunge.core
 
 import akka.actor.{ActorRef, Props}
 import com.codingkapoor.dataexpunge.`package`.{CASS, SOLR, VERTICA}
-import com.codingkapoor.dataexpunge.cass.CassPartitionExpunge
-import com.codingkapoor.dataexpunge.solr.SolrCollectionExpunge
-import com.codingkapoor.dataexpunge.vertica.VerticaRecordExpunge
+import com.codingkapoor.dataexpunge.cass.CassExpunge
+import com.codingkapoor.dataexpunge.solr.SolrExpunge
+import com.codingkapoor.dataexpunge.vertica.VerticaExpunge
 
 object `package` {
   type Ttl = Int
@@ -33,9 +33,9 @@ object `package` {
 
   def getDataExpungeProps(db: String): Props = {
     db match {
-      case CASS => CassPartitionExpunge.props
-      case SOLR => SolrCollectionExpunge.props
-      case VERTICA => VerticaRecordExpunge.props
+      case CASS => CassExpunge.props
+      case SOLR => SolrExpunge.props
+      case VERTICA => VerticaExpunge.props
     }
   }
 

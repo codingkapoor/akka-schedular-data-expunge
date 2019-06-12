@@ -92,7 +92,7 @@ class Scheduler extends FSM[State, Data] with Logger {
         val initialDelay = if (freq - spent >= 0) freq - spent else 0
         nextDo = current plusSeconds initialDelay
 
-        logger.debug(s"""customer = $customer, db = $db, event = $NewDeConfigsPerDb($deConfigsPerDb), state = $Active, current = $current, duration = $spent, initialDealy = $initialDelay, nextDo = $nextDo""")
+        logger.debug(s"""customer = $customer, db = $db, event = $NewDeConfigsPerDb($deConfigsPerDb), state = $Active, current = $current, duration = $spent, initialDelay = $initialDelay, nextDo = $nextDo""")
 
         reschedule(initialDelay, freq, ttl)
 

@@ -8,11 +8,11 @@ import com.codingkapoor.dataexpunge.core.Logger
 import com.codingkapoor.dataexpunge.core.`package`.Ttl
 import com.codingkapoor.dataexpunge.{Do, Done}
 
-object SolrCollectionExpunge {
-  def props: Props = Props[SolrCollectionExpunge]
+object SolrExpunge {
+  def props: Props = Props[SolrExpunge]
 }
 
-class SolrCollectionExpunge extends Actor with Logger {
+class SolrExpunge extends Actor with Logger {
 
   logger.info(s"Created ${this.self.path.name}.")
 

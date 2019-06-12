@@ -8,11 +8,11 @@ import com.codingkapoor.dataexpunge.core.Logger
 import com.codingkapoor.dataexpunge.core.`package`.Ttl
 import com.codingkapoor.dataexpunge.{Do, Done}
 
-object VerticaRecordExpunge {
-  def props: Props = Props[VerticaRecordExpunge]
+object VerticaExpunge {
+  def props: Props = Props[VerticaExpunge]
 }
 
-class VerticaRecordExpunge extends Actor with Logger {
+class VerticaExpunge extends Actor with Logger {
 
   logger.info(s"Created ${this.self.path.name}.")
 
