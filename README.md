@@ -6,11 +6,13 @@ The objective of this service is to rid data obsoleted by configured `ttl` value
 ## Architecture
 The service is designed to be reactive to changes made to the application configuration file. In other words, changes made to the configuration file will be accomodated by the service reactively and would not require service restarts.
 
+<br>
+
 <img src="https://github.com/codingkapoor/akka-schedular-data-expunge/blob/master/architecture.jpg" alt="architecture" />
 
+## Sample Configuration
 The actor system is infact influenced by the application configuration itself.
 
-## Sample Configuration
 ```
 deconf = {
     "siemens": {
