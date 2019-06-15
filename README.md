@@ -27,7 +27,7 @@ deconf = {
 Ttl watcher actor is the one that watches for any configuration changes and notifies the same to the *Supervisor* actor.
 
 ## Supervisor
-Supervisor actor creates supervisor per customer actors. This facilitates seggregation of concerns by customers. Configuration changes related to a customer will only be forwarded to the pertaining *SupervisorPerCustomer* actor. Also, this heirarchy of actors under *SupervisorPerCustomer* actor can be killed independently without affecting the other actors if that particular actor is decommissioned in the configuration file.
+Supervisor actor creates supervisor per customer actors. This facilitates seggregation of concerns by customers. Configuration changes related to a customer will only be forwarded to the pertaining *SupervisorPerCustomer* actor. Also, this heirarchy of actors under *SupervisorPerCustomer* actor can be killed independently without affecting the other actors if that particular customer is decommissioned in the configuration file.
 
 ## Supervisor per customer
 Based on which databases are commissioned in the configuration file, *SupervisorPerCustomer* actor creates a scheduler actor and a pertaining data expunge actor per db. It then forwards new configuration changes to the scheduler that then takes care of scheduling/rescheduling itself to ask the expunge actor for the job.
