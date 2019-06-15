@@ -1,5 +1,5 @@
 # akka-schedular-data-expunge
-Sample project to demo Akka Scheduler. The objective of this service is to rid data obsoleted by configured `ttl` value per databse in the `application.conf`.
+Sample project to demo Akka Scheduler in action. The objective of this service is to rid data obsoleted by configured `ttl` value per databse in the `application.conf`.
 
 ## Architecture
 The service is designed to be reactive to changes made to the application configuration file. In other words, changes made to the configuration file will be accomodated by the service reactively and would not require service restarts.
