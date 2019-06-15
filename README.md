@@ -3,7 +3,7 @@ Sample project to demo Akka Scheduler.
 
 ## Architecture
 
-<img src="https://github.com/codingkapoor/akka-schedular-data-expunge/blob/master/architecture.jpg" alt="architecture" width="1000" height="550"/>
+<img src="https://github.com/codingkapoor/akka-schedular-data-expunge/blob/master/architecture.jpg" alt="architecture" />
 
 ## Dev
 ```
