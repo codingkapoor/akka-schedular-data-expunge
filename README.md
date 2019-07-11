@@ -45,6 +45,7 @@ $ cd akka-schedular-data-expunge
 $ sbt> universal:stage 
 
 $ cd ./target/universal/stage/logs
+$ ../bin/start.sh
 $ tail -f stdout.log data-expunge.log
 ```
 
@@ -53,6 +54,7 @@ $ tail -f stdout.log data-expunge.log
 $ cd akka-schedular-data-expunge
 $ sbt> universal:packageBin
 
-$ cd ./logs
+$ cd ./target/universal/stage/logs
+$ ../bin/start.sh
 $ tail -f stdout.log data-expunge.log
 ```
